@@ -10,7 +10,7 @@ from tlrl.sim.wrapper import VecFrameStack3D
 MODEL = "PPO"
 ARCH = "att_3d_cnn"
 FRAMESTACK = 3
-RENDER = False
+RENDER = True
 VERBOSE = False
 SEED = 58736
 BEST_MODEL_PATH = "models/final_model.zip"
