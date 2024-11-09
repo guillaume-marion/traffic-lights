@@ -47,7 +47,7 @@ The following snapshots illustrate the parameters pertaining to the road network
 <br>
 For testing the model simply run <code>python -m scripts.rl.test</code>. You can also try your best to beat it running <code>python -m scripts.baseline.human</code>.
 
-The final model acting on the simulation:
+The final model acting on the simulation, and the best performing fixed policy as reference are shown below:
 
 <div style="display: flex; justify-content: center; gap: 20px;">
     <img src="images/example_rl.gif" alt="RL Example" style="width: 48%; height: auto;">
