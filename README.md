@@ -49,14 +49,16 @@ For testing the model simply run <code>python -m scripts.rl.test</code>. You can
 
 The final model acting on the simulation:
 
-<!-- <img src="images/example_rl.gif" width="100%" height="auto" style="max-width: 537px; max-height: 500px;" /> -->
-<video src="images/example_rl.mp4" style="max-width: 537px; max-height: 500px;" autoplay loop muted playsinline id="video1"></video>
+<div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="images/example_rl.gif" alt="RL Example" style="width: 48%; height: auto;">
+    <img src="images/example_fixed.gif" alt="Fixed Policy Example" style="width: 48%; height: auto;">
+</div>
 
+<!-- <img src="images/example_rl.gif" width="100%" height="auto" style="max-width: 537px; max-height: 500px;" />
 
 For reference, the optimal fixed length policy:
 
-<!-- <img src="images/example_fixed.gif" width="100%" height="auto" style="max-width: 537px; max-height: 500px;" /> -->
-<video src="images/example_fixed.mp4" style="max-width: 537px; max-height: 500px;" autoplay loop muted playsinline id="video2"></video>
+<img src="images/example_fixed.gif" width="100%" height="auto" style="max-width: 537px; max-height: 500px;" /> -->
 
 <br>
 The results from the different policies below:
@@ -116,28 +118,3 @@ Future developments
 <input type="checkbox">Generalize to multiple traffic lights</input>
 
 <input type="checkbox">Add multi-(hierarchical)-agent support</input>
-
-<script>
-    const video1 = document.getElementById("video1");
-    const video2 = document.getElementById("video2");
-
-    // Function to start both videos at the same time
-    function startVideosTogether() {
-        video1.play();
-        video2.play();
-    }
-
-    // Event listeners to detect when both videos are ready
-    let video1Ready = false;
-    let video2Ready = false;
-
-    video1.oncanplay = () => {
-        video1Ready = true;
-        if (video2Ready) startVideosTogether();
-    };
-
-    video2.oncanplay = () => {
-        video2Ready = true;
-        if (video1Ready) startVideosTogether();
-    };
-</script>

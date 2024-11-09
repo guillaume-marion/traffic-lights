@@ -125,3 +125,4 @@ recordings/
 .ruff_cache
 logs
 *.sumo.cfg
+*.mp4
